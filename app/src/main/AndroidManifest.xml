@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          package="com.wms.kuaichuan">
+
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+
+    <application
+        android:name="com.wms.kuaichuan.AppContext"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_logo"
+        android:label="@string/app_name"
+        android:supportsRtl="true">
+        <activity
+            android:name="com.wms.kuaichuan.ui.HomeActivity"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name="com.wms.kuaichuan.ui.MainActivity"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+        </activity>
+
+        <activity
+            android:name="com.wms.kuaichuan.ui.ClientActivity"
+            android:theme="@style/AppTheme"/>
+        <activity
+            android:name="com.wms.kuaichuan.ui.ServerActivity"
+            android:theme="@style/AppTheme"/>
+
+        <!-- 选择文件UI -->
+        <activity
+            android:name="com.wms.kuaichuan.ui.ChooseFileActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <!-- 选择文件接收者UI -->
+        <activity
+            android:name="com.wms.kuaichuan.ui.ChooseReceiverActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <!-- 接收者等待界面UI -->
+        <activity
+            android:name="com.wms.kuaichuan.ui.ReceiverWaitingActivity"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <!-- 文件发送列表界面UI -->
+        <activity
+            android:name="com.wms.kuaichuan.ui.FileSenderActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <!-- 文件接收列表界面UI -->
+        <activity
+            android:name="com.wms.kuaichuan.ui.FileReceiverActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+        <!-- 网页传界面UI-->
+        <activity
+            android:name="com.wms.kuaichuan.ui.WebTransferActivity"
+            android:launchMode="singleTop"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+
+    </application>
+
+</manifest>

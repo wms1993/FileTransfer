@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/layout_top_bar"/>
+
+    <TextView
+        android:id="@+id/tv_top_tip"
+        style="@style/style_common_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbar"
+        android:padding="10dp"
+        android:text="@string/tip_waiting_file_sender_connect"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tv_top_tip">
+
+        <com.wms.kuaichuan.ui.view.RadarLayout
+            android:id="@+id/radarLayout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/iv_device"
+            android:layout_width="@dimen/dp_96"
+            android:layout_height="@dimen/dp_96"
+            android:layout_centerInParent="true"
+            android:src="@mipmap/icon_radish"
+            app:civ_border_color="#FFFFFFFF"
+            app:civ_border_width="2dp"/>
+
+        <TextView
+            android:id="@+id/tv_device_name"
+            style="@style/style_common_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/iv_device"
+            android:padding="10dp"
+            android:text="@string/str_device_name"
+            android:textColor="@color/white"
+            android:textSize="14sp"/>
+
+        <TextView
+            android:id="@+id/tv_desc"
+            style="@style/style_common_text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_device_name"
+            android:text="@string/str_desc"
+            android:textColor="@color/white"
+            android:textSize="16sp"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

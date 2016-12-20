@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:background="@color/colorPrimary"
+                android:fitsSystemWindows="true">
+
+    <include
+        android:id="@+id/topbar"
+        layout="@layout/layout_top_bar"/>
+
+    <TextView
+        android:id="@+id/tv_top_tip"
+        style="@style/style_common_text"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/topbar"
+        android:padding="10dp"
+        android:text="@string/tip_please_click_user_avatar_to_receive"
+        android:textColor="@color/white"
+        android:textSize="16sp"
+        android:textStyle="bold"/>
+
+    <com.wms.kuaichuan.ui.view.RadarScanView
+        android:id="@+id/radarView"
+        android:layout_width="160dp"
+        android:layout_height="160dp"
+        android:layout_below="@id/tv_top_tip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"/>
+
+    <ListView
+        android:id="@+id/lv_result"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/radarView"
+        android:layout_marginLeft="@dimen/activity_horizontal_margin"
+        android:layout_marginRight="@dimen/activity_horizontal_margin"
+        android:layout_marginTop="@dimen/activity_horizontal_margin"
+        android:divider="@null"/>
+
+</RelativeLayout>
